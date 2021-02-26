@@ -2,15 +2,22 @@ import { useState, useEffect } from "react";
 
 interface TimerProps {
   gameStarted: boolean;
+  gameOver: boolean;
 }
 
-const Timer: React.FC<TimerProps> = ({ gameStarted }) => {
+const Timer: React.FC<TimerProps> = ({ gameStarted, gameOver }) => {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    let interval = setInterval(() => {
-      setTimer((timer) => timer + 1);
-    }, 1000);
+    let interval;
+    if (!gameOver) {
+      let interval = setInterval(() => {
+        setTimer((timer) => timer + 1);
+      }, 1000);
+    } else {
+      clearInterval(interval);
+      setTimer(0);
+    }
   }, [gameStarted]);
 
   const formatTime = () => {

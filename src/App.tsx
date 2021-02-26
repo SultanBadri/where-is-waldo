@@ -4,6 +4,7 @@ import WelcomeModal from "./components/WelcomeModal";
 
 const App: React.FC = () => {
   const [gameStarted, setGameStarted] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
 
   const startGame = (): void => {
     setGameStarted(true);
@@ -11,7 +12,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Header gameStarted={gameStarted} />
+      <Header gameStarted={gameStarted} gameOver={gameOver} />
       {!gameStarted && <WelcomeModal startGame={startGame} />}
     </>
   );
