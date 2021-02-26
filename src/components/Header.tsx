@@ -1,7 +1,30 @@
-const Header = () => {
+import Timer from "../components/Timer";
+
+interface HeaderProps {
+  gameStarted: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ gameStarted }) => {
   return (
-    <nav className="bg-green-400 text-white p-6">
-      <h2 className="text-2xl text-white font-bold">Where is Waldo?</h2>
+    <nav className="bg-gradient-to-r from-green-500 to-green-300 text-white p-6 flex justify-around">
+      <span className="text-2xl text-white font-bold inline-flex">
+        <svg
+          className="hw-6 w-6 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+        <h2 className="px-2">Where is Waldo?</h2>
+      </span>
+      {gameStarted && <Timer gameStarted={gameStarted} />}
     </nav>
   );
 };

@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header gameStarted={gameStarted} />
       {!gameStarted && <WelcomeModal startGame={startGame} />}
     </>
   );
