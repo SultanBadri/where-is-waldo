@@ -18,7 +18,7 @@ const Timer: React.FC<TimerProps> = ({ gameStarted, gameOver }) => {
       clearInterval(interval);
       setTimer(0);
     }
-  }, [gameStarted]);
+  }, [gameOver]);
 
   const formatTime = () => {
     const getSeconds = `0${timer % 60}`.slice(-2);
