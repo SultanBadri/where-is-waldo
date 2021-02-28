@@ -1,4 +1,5 @@
 import useContextMenu from "./useContextMenu";
+import { Motion, spring } from "react-motion";
 
 const ContextMenu = ({ menu }: any) => {
   const { xPos, yPos, showMenu } = useContextMenu();
@@ -11,7 +12,7 @@ const ContextMenu = ({ menu }: any) => {
         <>
           {showMenu ? (
             <div
-              className="menu-container"
+              className="absolute rounded p-4 w-50 h-50 bg-gray-700"
               style={{
                 top: yPos,
                 left: xPos,

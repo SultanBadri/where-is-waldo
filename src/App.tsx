@@ -12,29 +12,32 @@ const App = () => {
     setGameStarted(true);
   };
 
-  // override default context menu
-  document.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-    const xPos = e.pageX + "px";
-    const yPos = e.pageY + "px";
+  const handleContextMenu = (): void => {
+    alert("clicked");
+  };
 
-    const customMenu = () => (
-      <ul className="menu">
-        <li>Login</li>
-        <li>Register</li>
-        <li>Open Profile</li>
-      </ul>
-    );
+  const CustomMenu = () => (
+    <ul className="text-white text-xl">
+      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
+        Homer
+      </li>
+      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
+        Mr. Burns
+      </li>
+      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
+        Sir Oinks-A-Lot
+      </li>
+    </ul>
+  );
 
-    return (
-      <>
-        <ContextMenu menu={() => customMenu} />
-        <Header gameStarted={gameStarted} gameOver={gameOver} />
-        {gameStarted && <Cursor />}
-        {!gameStarted && <WelcomeModal startGame={startGame} />}
-      </>
-    );
-  });
+  return (
+    <>
+      <Header gameStarted={gameStarted} gameOver={gameOver} />
+      {gameStarted && <Cursor />}
+      {!gameStarted && <WelcomeModal startGame={startGame} />}
+      <ContextMenu menu={<CustomMenu></CustomMenu>} />
+    </>
+  );
 };
 
 export default App;
