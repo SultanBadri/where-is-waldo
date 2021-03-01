@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/where-is-waldo/static/css/main.fcdbb429.chunk.css",
-    "main.js": "/where-is-waldo/static/js/main.d3326e4f.chunk.js",
-    "main.js.map": "/where-is-waldo/static/js/main.d3326e4f.chunk.js.map",
+    "main.css": "/where-is-waldo/static/css/main.4972bc69.chunk.css",
+    "main.js": "/where-is-waldo/static/js/main.71268aac.chunk.js",
+    "main.js.map": "/where-is-waldo/static/js/main.71268aac.chunk.js.map",
     "runtime-main.js": "/where-is-waldo/static/js/runtime-main.9cb5198d.js",
     "runtime-main.js.map": "/where-is-waldo/static/js/runtime-main.9cb5198d.js.map",
     "static/js/2.e69c2c31.chunk.js": "/where-is-waldo/static/js/2.e69c2c31.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.4d847ce3.chunk.js": "/where-is-waldo/static/js/3.4d847ce3.chunk.js",
     "static/js/3.4d847ce3.chunk.js.map": "/where-is-waldo/static/js/3.4d847ce3.chunk.js.map",
     "index.html": "/where-is-waldo/index.html",
-    "static/css/main.fcdbb429.chunk.css.map": "/where-is-waldo/static/css/main.fcdbb429.chunk.css.map",
+    "static/css/main.4972bc69.chunk.css.map": "/where-is-waldo/static/css/main.4972bc69.chunk.css.map",
     "static/js/2.e69c2c31.chunk.js.LICENSE.txt": "/where-is-waldo/static/js/2.e69c2c31.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9cb5198d.js",
     "static/js/2.e69c2c31.chunk.js",
-    "static/css/main.fcdbb429.chunk.css",
-    "static/js/main.d3326e4f.chunk.js"
+    "static/css/main.4972bc69.chunk.css",
+    "static/js/main.71268aac.chunk.js"
   ]
 }
