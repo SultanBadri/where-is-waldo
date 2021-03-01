@@ -29,7 +29,9 @@ const Timer: React.FC<TimerProps> = ({ gameStarted, gameOver }) => {
     return `${getHours} : ${getMinutes} : ${getSeconds}`;
   };
 
-  return <h2 className="text-2xl">{formatTime()}</h2>;
+  return (
+    <h2 className="text-2xl text-purple-500 font-semibold">{formatTime()}</h2>
+  );
 };
 
 export default Timer;

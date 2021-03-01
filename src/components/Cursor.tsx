@@ -34,7 +34,10 @@ const Cursor = () => {
   };
 
   const hiddenCursor = hidden ? "opacity-0" : "opacity-1";
-  const classes = `w-20 h-20 z-50 pointer-events-none fixed border-2 border-black border-solid -translate-y-1/2 -translate-x-1/2 rounded-full transition duration 150ms ease ${hiddenCursor}`;
+  const classes = `w-20 h-20 z-50 pointer-events-none fixed border-2 border-black border-solid transform -translate-y-1/2 -translate-x-1/2 rounded-full transition duration 150ms ease ${hiddenCursor}`;
+
+  // hide default cursor
+  document.documentElement.style.cursor = "none";
 
   return (
     <div

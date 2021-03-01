@@ -18,15 +18,9 @@ const App = () => {
 
   const CustomMenu = () => (
     <ul className="text-white text-xl">
-      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
-        Homer
-      </li>
-      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
-        Mr. Burns
-      </li>
-      <li className="p-1 rounded hover:bg-gray-400" onClick={handleContextMenu}>
-        Sir Oinks-A-Lot
-      </li>
+      <li className="p-1 rounded hover:bg-gray-400">Homer</li>
+      <li className="p-1 rounded hover:bg-gray-400">Mr. Burns</li>
+      <li className="p-1 rounded hover:bg-gray-400">Sir Oinks-A-Lot</li>
     </ul>
   );
 
