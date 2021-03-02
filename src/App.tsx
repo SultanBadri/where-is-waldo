@@ -3,6 +3,7 @@ import ContextMenu from "./components/ContextMenu";
 import Cursor from "../src/components/Cursor";
 import Header from "./components/Header";
 import WelcomeModal from "./components/WelcomeModal";
+import firestore from "./firebase/config";
 
 const App = () => {
   const [gameStarted, setGameStarted] = useState(false);
@@ -24,12 +25,27 @@ const App = () => {
     </ul>
   );
 
+  // const RenderData = (doc: any) => {
+  //   return <li>{doc.data()}</li>;
+  // };
+
+  firestore
+    .collection("characters")
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        // RenderData(doc);
+        console.log(doc.data());
+      });
+    });
+
   return (
     <>
       <Header gameStarted={gameStarted} gameOver={gameOver} />
       {gameStarted && <Cursor />}
       {!gameStarted && <WelcomeModal startGame={startGame} />}
       <ContextMenu menu={<CustomMenu></CustomMenu>} />
+      {/* <RenderData></RenderData> */}
     </>
   );
 };
